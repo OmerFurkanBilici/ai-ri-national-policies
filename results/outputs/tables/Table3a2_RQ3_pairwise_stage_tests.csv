@@ -1,0 +1,4 @@
+comparison,n_1,n_2,GE_diff,cliffs_delta,p_mannwhitney,p_holm
+Non-binding only vs No recorded instrument,88,90,1.019,0.593,<0.001,<0.001
+Binding enacted vs Non-binding only,17,88,-0.0,0.024,0.879,0.879
+Binding enacted vs No recorded instrument,17,90,1.019,0.635,<0.001,<0.001
