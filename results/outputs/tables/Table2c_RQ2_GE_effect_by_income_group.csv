@@ -1,4 +1,0 @@
-income_group,N,adopters,OR_per_SD_GE,ci_lo,ci_hi,p
-Low & lower-middle,72,15,31.413,4.904,201.236,<0.001
-Upper-middle,59,20,5.006,1.167,21.47,0.030
-High,64,41,1.999,0.821,4.866,0.127

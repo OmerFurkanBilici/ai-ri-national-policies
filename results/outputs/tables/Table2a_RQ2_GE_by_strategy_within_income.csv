@@ -1,5 +1,0 @@
-Group,n_adopters,n_non_adopters,adoption_rate_pct,GE_mean_adopters,GE_mean_non_adopters,cliffs_delta,p_mannwhitney,GE_diff
-All countries,76,119,39.0,0.623,-0.347,0.581,<0.001,0.97
-Low & lower-middle,15,57,20.8,-0.162,-0.97,0.74,<0.001,0.808
-Upper-middle,20,39,33.9,0.127,-0.178,0.282,0.080,0.305
-High,41,23,64.1,1.153,0.912,0.258,0.090,0.241
