@@ -1,4 +1,0 @@
-input,original_file_name,path_used,matched_by,bytes,sha256,matches_archived_snapshot,source_url
-policies,policies.csv,data/policies.csv,exact name,244683,13fdcc12c0a9065ff8f0931518dcc2a350d65f630ba92cccc69553e1301558bc,yes,https://aipolicytracker.org/open-data/policies.csv
-jurisdictions,jurisdictions.csv,data/jurisdictions.csv,exact name,269943,807e6f83cb0921b9cdfc4cff4307969f2f7d1219ebe90f677fab140b0685557a,yes,https://aipolicytracker.org/open-data/jurisdictions.csv
-wgi,WGI 2026 Governance Estimates and Scores (1996-2025).xlsx,data/WGI 2026 Governance Estimates and Scores (1996-2025).xlsx,exact name,10958369,8e4754bda8b2be0b36d172c18a4caa634cb36fddd54145d16ab7316d22b3542c,yes,https://datacatalogfiles.worldbank.org/ddh-published/0038026/DR0095947/WGI%202026%20Governance%20Estimates%20and%20Scores%20(1996-2025).xlsx

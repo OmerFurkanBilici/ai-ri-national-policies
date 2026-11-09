@@ -1,5 +1,0 @@
-test,comparison,n_1,n_2,GE_diff,cliffs_delta,statistic,p,p_holm
-Kruskal–Wallis H (omnibus),all three stages,195,,,,52.043,<0.001,n/a
-Mann–Whitney U (pairwise),"Recorded policy, no enacted national binding measure vs No recorded instrument",88,90.0,1.019,0.593,6307.0,<0.001,<0.001
-Mann–Whitney U (pairwise),"Enacted national binding measure vs Recorded policy, no enacted national binding measure",17,88.0,-0.0,0.024,766.0,0.879,0.879
-Mann–Whitney U (pairwise),Enacted national binding measure vs No recorded instrument,17,90.0,1.019,0.635,1251.0,<0.001,<0.001
