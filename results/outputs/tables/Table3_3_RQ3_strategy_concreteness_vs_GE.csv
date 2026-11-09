@@ -1,0 +1,3 @@
+strategy_content_measure,N_countries,mean,spearman_rho_with_GE,p
+Implementation concreteness (0–3),76,0.789,0.308,0.007
+Number of RI dimensions (0–4),76,0.855,0.158,0.172

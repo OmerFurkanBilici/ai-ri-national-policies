@@ -1,0 +1,19 @@
+dimension,code,label,n_Enacted binding,N_Enacted binding,pct_Enacted binding,n_Non-binding,N_Non-binding,pct_Non-binding,diff_pp,odds_ratio,or_ci_lo,or_ci_hi,p_fisher,q_bh
+Anticipation,ant_risk,Risk assessment & classification,11,23,47.8,15,119,12.6,35.2,6.2,2.37,16.24,<0.001,0.002
+Anticipation,ant_safety,Safety & harm prevention,4,23,17.4,19,119,16.0,1.4,1.19,0.38,3.7,1.000,1.000
+Reflexivity,ref_ethics,Ethics & values,4,23,17.4,48,119,40.3,-22.9,0.34,0.11,1.01,0.057,0.102
+Reflexivity,ref_principles,Principles & trustworthy AI,7,23,30.4,50,119,42.0,-11.6,0.63,0.25,1.6,0.358,0.537
+Inclusion,inc_consult,Consultation & participation,2,23,8.7,9,119,7.6,1.1,1.35,0.31,5.87,1.000,1.000
+Inclusion,inc_inclusive,Inclusiveness & accessibility,1,23,4.3,3,119,2.5,1.8,2.22,0.31,15.84,0.511,0.707
+Responsiveness,res_transparency,Transparency & explainability,10,23,43.5,21,119,17.6,25.8,3.56,1.4,9.05,0.011,0.029
+Responsiveness,res_accountability,Accountability & oversight,12,23,52.2,24,119,20.2,32.0,4.24,1.7,10.59,0.003,0.009
+Responsiveness,res_monitoring,Monitoring & review,3,23,13.0,16,119,13.4,-0.4,1.07,0.31,3.73,1.000,1.000
+Actualization,act_institution,Dedicated institution,12,23,52.2,39,119,32.8,19.4,2.22,0.91,5.38,0.097,0.159
+Actualization,act_obligation,Obligations & enforcement,15,23,65.2,12,119,10.1,55.1,15.68,5.65,43.54,<0.001,<0.001
+Actualization,act_resources,Resources & targets,5,23,21.7,35,119,29.4,-7.7,0.71,0.25,1.98,0.614,0.789
+Contrast,cap_capacity,Capacity building & economic promotion,4,23,17.4,89,119,74.8,-57.4,0.08,0.03,0.24,<0.001,<0.001
+Dimension total,dim_anticipation,Anticipation,11,23,47.8,26,119,21.8,26.0,3.25,1.31,8.06,0.017,0.039
+Dimension total,dim_reflexivity,Reflexivity,9,23,39.1,75,119,63.0,-23.9,0.39,0.16,0.95,0.039,0.078
+Dimension total,dim_inclusion,Inclusion,3,23,13.0,11,119,9.2,3.8,1.61,0.45,5.83,0.701,0.841
+Dimension total,dim_responsiveness,Responsiveness,16,23,69.6,36,119,30.3,39.3,5.03,1.95,12.97,<0.001,0.003
+Dimension total,dim_actualization,Actualization,21,23,91.3,69,119,58.0,33.3,6.25,1.61,24.32,0.002,0.007

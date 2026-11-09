@@ -1,0 +1,58 @@
+RQ,estimate,outcome_and_model_terms,specification,odds_ratio,ci_lo,ci_hi,p,N
+RQ1,Ethics & values: binding vs non-binding (Fisher OR),binding status,main: enacted binding vs finalized non-binding,0.34,0.115,1.01,0.057,142
+RQ1,Reflexivity: binding vs non-binding (Fisher OR),binding status,main: enacted binding vs finalized non-binding,0.386,0.157,0.948,0.039,142
+RQ1,Risk assessment & classification: binding vs non-binding (Fisher OR),binding status,main: enacted binding vs finalized non-binding,6.203,2.37,16.236,<0.001,142
+RQ1,Accountability & oversight: binding vs non-binding (Fisher OR),binding status,main: enacted binding vs finalized non-binding,4.237,1.696,10.585,0.003,142
+RQ1,Obligations & enforcement: binding vs non-binding (Fisher OR),binding status,main: enacted binding vs finalized non-binding,15.682,5.648,43.543,<0.001,142
+RQ1,Capacity building & economic promotion: binding vs non-binding (Fisher OR),binding status,main: enacted binding vs finalized non-binding,0.079,0.026,0.237,<0.001,142
+RQ1,Ethics & values: binding vs non-binding (Fisher OR),binding status,verified or high-confidence records,0.339,0.113,1.011,0.053,137
+RQ1,Reflexivity: binding vs non-binding (Fisher OR),binding status,verified or high-confidence records,0.392,0.157,0.977,0.056,137
+RQ1,Risk assessment & classification: binding vs non-binding (Fisher OR),binding status,verified or high-confidence records,8.28,3.027,22.649,<0.001,137
+RQ1,Accountability & oversight: binding vs non-binding (Fisher OR),binding status,verified or high-confidence records,4.686,1.836,11.961,0.002,137
+RQ1,Obligations & enforcement: binding vs non-binding (Fisher OR),binding status,verified or high-confidence records,17.112,5.982,48.947,<0.001,137
+RQ1,Capacity building & economic promotion: binding vs non-binding (Fisher OR),binding status,verified or high-confidence records,0.072,0.024,0.22,<0.001,137
+RQ1,Ethics & values: binding vs non-binding (Fisher OR),binding status,excluding strategies,0.47,0.14,1.583,0.247,63
+RQ1,Reflexivity: binding vs non-binding (Fisher OR),binding status,excluding strategies,0.287,0.1,0.825,0.032,63
+RQ1,Risk assessment & classification: binding vs non-binding (Fisher OR),binding status,excluding strategies,1.681,0.603,4.688,0.423,63
+RQ1,Accountability & oversight: binding vs non-binding (Fisher OR),binding status,excluding strategies,0.809,0.294,2.227,0.794,63
+RQ1,Obligations & enforcement: binding vs non-binding (Fisher OR),binding status,excluding strategies,6.046,1.998,18.298,0.001,63
+RQ1,Capacity building & economic promotion: binding vs non-binding (Fisher OR),binding status,excluding strategies,0.422,0.126,1.412,0.160,63
+RQ1,Ethics & values: binding vs non-binding (Fisher OR),binding status,non-binding group incl. proposals,0.335,0.114,0.986,0.037,158
+RQ1,Reflexivity: binding vs non-binding (Fisher OR),binding status,non-binding group incl. proposals,0.375,0.154,0.913,0.037,158
+RQ1,Risk assessment & classification: binding vs non-binding (Fisher OR),binding status,non-binding group incl. proposals,4.404,1.762,11.007,0.002,158
+RQ1,Accountability & oversight: binding vs non-binding (Fisher OR),binding status,non-binding group incl. proposals,4.289,1.737,10.586,0.003,158
+RQ1,Obligations & enforcement: binding vs non-binding (Fisher OR),binding status,non-binding group incl. proposals,11.582,4.392,30.54,<0.001,158
+RQ1,Capacity building & economic promotion: binding vs non-binding (Fisher OR),binding status,non-binding group incl. proposals,0.088,0.029,0.262,<0.001,158
+RQ1,Ethics & values: binding vs non-binding (Fisher OR),binding status,Tracker binding flag (incl. binding proposals) vs all non-binding,0.256,0.089,0.738,0.006,164
+RQ1,Reflexivity: binding vs non-binding (Fisher OR),binding status,Tracker binding flag (incl. binding proposals) vs all non-binding,0.409,0.183,0.915,0.036,164
+RQ1,Risk assessment & classification: binding vs non-binding (Fisher OR),binding status,Tracker binding flag (incl. binding proposals) vs all non-binding,5.117,2.203,11.888,<0.001,164
+RQ1,Accountability & oversight: binding vs non-binding (Fisher OR),binding status,Tracker binding flag (incl. binding proposals) vs all non-binding,4.218,1.84,9.666,<0.001,164
+RQ1,Obligations & enforcement: binding vs non-binding (Fisher OR),binding status,Tracker binding flag (incl. binding proposals) vs all non-binding,16.065,6.318,40.85,<0.001,164
+RQ1,Capacity building & economic promotion: binding vs non-binding (Fisher OR),binding status,Tracker binding flag (incl. binding proposals) vs all non-binding,0.085,0.031,0.232,<0.001,164
+RQ2,Recorded strategy adoption: governance OR per 1-unit WGI (M2),ge + income,GE 2025 (main),4.737,2.4,9.35,<0.001,195
+RQ2,"Governance × income interaction: LR test M3 vs M2 (χ²=8.96, df=2)",ge × income,GE 2025 (main),,,,0.011,195
+RQ2,Recorded strategy adoption: governance OR per 1-unit WGI (M2),ge_pre + income,GE mean 2017–2022,3.64,1.941,6.824,<0.001,195
+RQ2,"Governance × income interaction: LR test M3 vs M2 (χ²=9.25, df=2)",ge_pre × income,GE mean 2017–2022,,,,0.010,195
+RQ2,Recorded strategy adoption: governance OR per 1-unit WGI (M2),rq + income,Regulatory Quality 2025,3.472,1.771,6.807,<0.001,195
+RQ2,"Governance × income interaction: LR test M3 vs M2 (χ²=6.72, df=2)",rq × income,Regulatory Quality 2025,,,,0.035,195
+RQ3,"Stage 2: enacted binding among countries with a recorded policy (Firth OR, profile CI)",ge + eu → binding_national,GE 2025 (main),1.174,0.581,2.295,0.644,105
+RQ3,"Stage 2: enacted binding among countries with a recorded policy (Firth OR, profile CI)",ge_pre + eu → binding_national,GE mean 2017–2022,1.182,0.593,2.275,0.623,105
+RQ3,"Stage 2: enacted binding among countries with a recorded policy (Firth OR, profile CI)",rq + eu → binding_national,Regulatory Quality 2025,0.928,0.451,1.822,0.830,105
+RQ3,"Stage 2: enacted binding among countries with a recorded policy (Firth OR, profile CI)",ge → binding_national,Excluding EU members,1.364,0.663,2.744,0.389,78
+RQ3,"Stage 2: enacted binding among countries with a recorded policy (Firth OR, profile CI)",ge → binding_eu_adj,EU AI Act attributed to members (sensitivity),2.901,1.703,5.231,<0.001,105
+RQ4,Enacted binding instrument: 2023+ vs 2017–2022 (Fisher OR),period,2017–2025 (main),2.783,0.926,8.363,0.056,123
+RQ4,Anticipation: 2023+ vs 2017–2022 (Fisher OR),period,2017–2025 (main),3.432,1.393,8.456,0.005,123
+RQ4,Responsiveness: 2023+ vs 2017–2022 (Fisher OR),period,2017–2025 (main),3.278,1.47,7.31,0.004,123
+RQ4,Capacity building & economic promotion: 2023+ vs 2017–2022 (Fisher OR),period,2017–2025 (main),0.484,0.22,1.064,0.082,123
+RQ4,Enacted binding instrument: 2023+ vs 2017–2022 (Fisher OR),period,verified or high-confidence records,2.64,0.875,7.972,0.085,122
+RQ4,Anticipation: 2023+ vs 2017–2022 (Fisher OR),period,verified or high-confidence records,3.506,1.422,8.646,0.005,122
+RQ4,Responsiveness: 2023+ vs 2017–2022 (Fisher OR),period,verified or high-confidence records,3.368,1.508,7.523,0.002,122
+RQ4,Capacity building & economic promotion: 2023+ vs 2017–2022 (Fisher OR),period,verified or high-confidence records,0.497,0.226,1.096,0.083,122
+RQ4,Enacted binding instrument: 2023+ vs 2017–2022 (Fisher OR),period,finalized instruments only (proposals excluded),3.199,1.06,9.654,0.031,115
+RQ4,Anticipation: 2023+ vs 2017–2022 (Fisher OR),period,finalized instruments only (proposals excluded),2.941,1.175,7.362,0.020,115
+RQ4,Responsiveness: 2023+ vs 2017–2022 (Fisher OR),period,finalized instruments only (proposals excluded),3.154,1.397,7.121,0.006,115
+RQ4,Capacity building & economic promotion: 2023+ vs 2017–2022 (Fisher OR),period,finalized instruments only (proposals excluded),0.523,0.234,1.166,0.116,115
+RQ4,Enacted binding instrument: 2023+ vs 2017–2022 (Fisher OR),period,2017–2026 incl. partial year,2.463,0.822,7.376,0.093,131
+RQ4,Anticipation: 2023+ vs 2017–2022 (Fisher OR),period,2017–2026 incl. partial year,3.71,1.523,9.041,0.003,131
+RQ4,Responsiveness: 2023+ vs 2017–2022 (Fisher OR),period,2017–2026 incl. partial year,3.235,1.467,7.134,0.003,131
+RQ4,Capacity building & economic promotion: 2023+ vs 2017–2022 (Fisher OR),period,2017–2026 incl. partial year,0.454,0.209,0.987,0.057,131

@@ -1,0 +1,10 @@
+model,model_terms,term,odds_ratio,profile_ci_lo,profile_ci_hi,wald_ci_lo,wald_ci_hi,p_penalised_LR,converged,iterations,rank,N,events
+Stage 1: any recorded AI policy ~ GE (all countries),ge,Intercept,1.204,0.866,1.683,0.864,1.678,n/a,True,6,2/2,195,105
+Stage 1: any recorded AI policy ~ GE (all countries),ge,ge,4.225,2.772,6.845,2.695,6.625,<0.001,True,6,2/2,195,105
+Stage 1b: recorded strategy ~ GE (all countries),ge,Intercept,0.542,0.383,0.755,0.386,0.761,n/a,True,6,2/2,195,76
+Stage 1b: recorded strategy ~ GE (all countries),ge,ge,3.572,2.414,5.554,2.357,5.412,<0.001,True,6,2/2,195,76
+Stage 2: enacted national binding measure ~ GE (countries with policy),ge,Intercept,0.202,0.105,0.353,0.11,0.368,n/a,True,7,2/2,105,17
+Stage 2: enacted national binding measure ~ GE (countries with policy),ge,ge,1.007,0.528,1.884,0.535,1.896,0.983,True,7,2/2,105,17
+Stage 2 (main): enacted national binding measure ~ GE + EU member,ge + eu,Intercept,0.219,0.113,0.388,0.118,0.405,n/a,True,8,3/3,105,17
+Stage 2 (main): enacted national binding measure ~ GE + EU member,ge + eu,ge,1.174,0.581,2.295,0.592,2.327,0.644,True,8,3/3,105,17
+Stage 2 (main): enacted national binding measure ~ GE + EU member,ge + eu,eu,0.549,0.122,2.037,0.137,2.207,0.380,True,8,3/3,105,17

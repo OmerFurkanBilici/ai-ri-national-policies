@@ -1,0 +1,10 @@
+type3,legal_status3,dated,undated,undated_pct
+Act / regulation / bill / executive order,Enacted binding,22,0,0.0
+Act / regulation / bill / executive order,Binding proposal,1,5,83.3
+Act / regulation / bill / executive order,"Non-binding, finalized",1,0,0.0
+Act / regulation / bill / executive order,Non-binding proposal,4,0,0.0
+Guidance / framework / policy / other,Enacted binding,1,0,0.0
+Guidance / framework / policy / other,"Non-binding, finalized",32,7,17.9
+Guidance / framework / policy / other,Non-binding proposal,3,1,25.0
+Strategy,"Non-binding, finalized",64,15,19.0
+Strategy,Non-binding proposal,3,5,62.5

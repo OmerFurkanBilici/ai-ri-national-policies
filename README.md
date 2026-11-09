@@ -1,10 +1,11 @@
-# Responsible Innovation in National AI Policies — Analysis Code and Results
+# Responsible Innovation in National AI Policies — Analysis Code, Data Snapshot and Results
 
 **Group 7 · Team Batman** — Necla İlayda Güler & Ömer Furkan Bilici
 Module: *AI, Power & Responsibility: Governing Intelligence*
 Target journal: *Technological Forecasting and Social Change* (Elsevier)
+Version: **v1.2.0** (revised analysis after two rounds of technical review; v1.0.0 was the first executed run)
 
-This repository contains the **final executed run** of the analysis for our research proposal: the notebook with all cell outputs, and every figure and table it produced (`results/`). Re-running the notebook on the public data reproduces all results.
+This repository is the replication package for our study. It contains the executed notebook with all outputs, the exact input files used (with SHA-256 checksums), the validation codings, and every figure and table produced by the final run.
 
 ## Research questions
 
@@ -12,95 +13,84 @@ This repository contains the **final executed run** of the analysis for our rese
 |---|---|
 | RQ1 | Which responsible innovation dimensions do national AI policy instruments articulate, and does the RI profile shift from ethics-oriented reflexivity in non-binding instruments to risk- and accountability-oriented responsiveness in binding ones? |
 | RQ2 | Is government effectiveness associated with national AI strategy adoption, and is this association conditional on a country’s income level? |
-| RQ3 | Among countries that have adopted AI policies, does governance capacity predict the actualization of strategic commitments into binding instruments, or are the two decoupled? |
+| RQ3 | *As analysed:* among countries with a recorded AI policy, is government effectiveness associated with having an enacted national binding measure? (The proposal asked whether strategic commitments are actualized into binding instruments or decoupled; that transition would require linking individual strategies to later laws, which the cross-sectional data do not allow, so the decoupling interpretation is not claimed.) |
 | RQ4 | How have the legal status and responsible innovation profile of AI policy instruments changed between the pre-generative-AI period (2017–2022) and the generative-AI period (2023 onward)? |
 
-## Files
+**Scope of inference.** All analyses are cross-sectional and observational. Country-level results describe associations between governance indicators and the instruments *recorded by the AI Policy Tracker*; they do not trace individual strategies into law and are not causal estimates. RI content is coded from the Tracker's short policy summaries, not from full policy texts.
 
-| File | Content |
+## Repository contents
+
+| Path | Content |
 |---|---|
-| `ai_ri_policy_analysis.ipynb` | The executed notebook with outputs (19 code cells, each preceded by a markdown cell explaining what it does and which RQ / method step it serves) |
+| `ai_ri_policy_analysis.ipynb` | Executed notebook (v1.2.0) with all cell outputs; every code cell is preceded by a markdown cell explaining what it does and which RQ / method step it serves |
+| `data/` | Exact input snapshot used for the archived run, `checksums.sha256`, and `data/README.md` (sources, licences, retrieval) |
+| `validation/ai_rater_codes.csv` | Blind LLM-assisted codings of the 40-summary validation sample (see *Coding validation*) |
+| `validation/llm_rater_procedure.md` | Model, date, instruction and procedure of the LLM-assisted rater |
+| `validation/coding_protocol.md`, `validation/coding_sheet_coder_A.xlsx`, `validation/coding_sheet_coder_B.xlsx` | Protocol and blind sheets (randomized IDs, summary text only) for human double coding |
 | `results/ai_ri_policy_results.zip` | All outputs of the final run in one archive |
-| `results/outputs/` | The same outputs unzipped: `figures/` (Figures 1–4, PDF + PNG), `tables/` (CSV), `key_findings.md` |
-| `requirements.txt` | Python dependencies |
-| `README.md` | This file |
+| `results/outputs/` | The same outputs unzipped: `figures/` (8 figures, PDF + PNG), `tables/` (CSV), `key_findings.md`, `session_info.txt` |
+| `requirements.txt` | Pinned Python environment of the archived run |
+| `CITATION.cff`, `LICENSE` | Citation metadata; MIT licence for the code |
 
-## Dependencies
-
-Python ≥ 3.10 with `pandas`, `numpy`, `matplotlib`, `scipy`, `statsmodels`, `openpyxl` (and optionally `scikit-learn`). All are pre-installed on Kaggle. Locally:
+## How to reproduce
 
 ```bash
 pip install -r requirements.txt
+jupyter nbconvert --to notebook --execute ai_ri_policy_analysis.ipynb --output ai_ri_policy_analysis.ipynb
 ```
 
-No machine learning and no GPU are needed.
+Run from the repository root. The notebook reads the inputs from `data/` under their **original file names**, verifies them against `data/checksums.sha256` (reported in Table S1c) and writes all results to `./outputs` and `./ai_ri_policy_results.zip`. Runtime is about one minute on a laptop CPU.
 
-## Dataset access
+**On Kaggle:** upload the three files from `data/` (names unchanged; matching is case-insensitive) and `validation/ai_rater_codes.csv` as one dataset, import the notebook, attach the dataset and *Run All*. Results appear under `/kaggle/working/outputs`.
 
-Both datasets are public, free, need no registration and are licensed under **CC BY 4.0**.
+**Fresh download.** The Tracker is a living database. A newer download of `policies.csv` or `jurisdictions.csv` will have a different checksum (flagged as *NO – different snapshot* in Table S1c) and can change the results; use the files in `data/` to reproduce the archived numbers exactly.
 
-| Dataset | Files to download | URL |
-|---|---|---|
-| AI Policy Tracker — Open Data | `policies.csv` (policy instruments) | https://aipolicytracker.org/open-data/policies.csv |
-| | `jurisdictions.csv` (jurisdiction profiles) | https://aipolicytracker.org/open-data/jurisdictions.csv |
-| | Landing page | https://aipolicytracker.org/open-data |
-| World Bank Worldwide Governance Indicators (WGI), 2026 release | `WGI 2026 Governance Estimates and Scores (1996-2025).xlsx` | https://datacatalogfiles.worldbank.org/ddh-published/0038026/DR0095947/WGI%202026%20Governance%20Estimates%20and%20Scores%20(1996-2025).xlsx |
-| | Catalog page | https://datacatalog.worldbank.org/search/dataset/0038026/worldwide-governance-indicators |
+## Data
 
-File names do not need to be changed: the notebook finds any file whose name contains `policies` (.csv), `jurisdictions` (.csv) and `wgi` (.xlsx), regardless of upper or lower case.
+| Dataset | Files | Source | Licence |
+|---|---|---|---|
+| AI Policy Tracker — Open Data | `policies.csv`, `jurisdictions.csv` | https://aipolicytracker.org/open-data | CC BY 4.0 |
+| World Bank Worldwide Governance Indicators, 2026 release | `WGI 2026 Governance Estimates and Scores (1996-2025).xlsx` | https://datacatalog.worldbank.org/search/dataset/0038026/worldwide-governance-indicators | CC BY 4.0 |
 
-## How to run
+Details, retrieval information and checksums: `data/README.md`.
 
-**On Kaggle (recommended)**
-1. *Datasets → New Dataset*: upload the three files above and create the dataset.
-2. *Code → New Notebook → File → Import Notebook*: select `ai_ri_policy_analysis.ipynb`.
-3. *Add Input*: attach the dataset from step 1.
-4. *Run All* (about one minute on the default CPU).
-5. Results appear under `/kaggle/working/outputs` and as `/kaggle/working/ai_ri_policy_results.zip` (*Output* tab).
-
-**Locally**
-1. Put the three data files in the same folder as the notebook (or any sub-folder).
-2. `pip install -r requirements.txt`
-3. `jupyter notebook ai_ri_policy_analysis.ipynb` → *Run All*. Results go to `./outputs` and `./ai_ri_policy_results.zip`.
-
-## Execution procedure (what the notebook does)
+## Execution procedure
 
 | Step | Purpose | RQ |
 |---|---|---|
-| 1–1b | Set-up, output folders, publication style, locate input files | all |
-| 2 | Load and audit the three source files | all |
-| 3 | Keep country-level instruments; build a frame of all countries (non-adopters kept) | all |
+| 1–1b | Set-up, session info, explicit input paths and checksum verification | all |
+| 2 | Load and audit the source files | all |
+| 3 | Country-level sample; reference date and its source; procedural stage (proposal vs finalized) and legal status (enacted binding / binding proposal / non-binding finalized / non-binding proposal) | all |
 | 4 | Link WGI Government Effectiveness, Regulatory Quality and income group | RQ2, RQ3 |
-| 5 | Country indicators (strategy, any policy, enacted binding instrument, EU AI Act sensitivity) | RQ2, RQ3 |
-| 6 | Responsible-innovation codebook (Stilgoe et al., 2013 dimensions + actualization markers) | RQ1, RQ4 |
-| 7 | Apply the codebook to policy summaries; export coding sheet and validation sample | RQ1, RQ4 |
-| 8 | Binding vs non-binding RI profile: Fisher exact tests, odds ratios, Benjamini–Hochberg | RQ1 |
-| 9 | Strategy adoption vs GE within income groups: Mann–Whitney, logit with GE × income | RQ2 |
-| 10 | Articulation vs actualization: Kruskal–Wallis, two-stage Firth logistic regression | RQ3 |
-| 11 | 2017–2022 vs 2023+: Fisher exact tests, Benjamini–Hochberg | RQ4 |
-| 12 | Robustness checks (verified records, pre-period GE, Regulatory Quality, EU) | all |
-| 13 | Data-driven summary of key findings (numbers taken from the tables) | all |
-| 14 | Manifest and single zip of all outputs | all |
+| 5 | Country indicators (recorded strategy, any recorded policy, enacted national binding measure, EU membership) | RQ2, RQ3 |
+| 6 | RI codebook with operational definitions (Stilgoe et al., 2013 dimensions + actualization markers) | RQ1, RQ3, RQ4 |
+| 7–7b | Dictionary coding of all summaries; blind validation sample; coding reliability (κ) | RQ1 |
+| 8 | Enacted binding vs finalized non-binding RI profile (proposals excluded): Fisher tests, BH q-values; country-clustered, length-adjusted logits | RQ1 |
+| 9 | Recorded strategy adoption vs GE within income groups; M1–M3 logits, LR test; interaction re-estimated for pre-period GE and Regulatory Quality | RQ2 |
+| 10 | GE across policy stages (Kruskal–Wallis, Holm-adjusted pairwise tests); two-stage Firth logit with convergence/rank checks and profile CIs; strategy × law co-occurrence and chronology | RQ3 |
+| 11 | 2017–2022 vs 2023–2025 comparison of the recorded instrument mix; missing dates; clustered/length-adjusted, finalized-only and partial-2026 sensitivities | RQ4 |
+| 12 | Robustness checks with fixed outcomes and model terms (Table S3) | all |
+| 13–14 | Data-driven key findings; manifest with checksums; results zip | all |
 
-## Outputs (included in `results/`; re-created when the notebook is run)
+## Outputs
 
-- `outputs/figures/` — Figures 1–4, one per RQ, as **PDF** (and PNG)
-- `outputs/tables/` — all tables as **CSV** (main tables per RQ, codebook, robustness checks, coding sheet, validation sample, country dataset)
-- `ai_ri_policy_results.zip` — everything above in one archive
+8 figures (two per RQ, as planned in the proposal) and the following tables: 1.1–1.4, 2.1–2.3, 3.1–3.4, 4.1–4.5, and supplementary tables S1a–S1d, S2–S9 (S5 = blind human coding sheet, S5b = its ID key). `results/outputs/tables/manifest.csv` lists every file with its research question and SHA-256 checksum.
 
-## Optional: manual coding
+## Coding validation
 
-To replace the dictionary coding with human-verified codes, add a file `manual_coding.csv` (column `slug` plus any code columns such as `ref_ethics`, `ant_risk`, values 0/1) to the input data. The notebook then uses these codes and reports Cohen’s κ against the dictionary coding.
+Dictionary codes are the single measurement used for all instruments. A stratified sample of 40 summaries (fixed seed) was coded by an **LLM-assisted rater** (Claude Opus 5.5, Anthropic), blind to the dictionary output, from the operational definitions in Table S2; agreement and Cohen's κ are reported per code and per dimension in Table 1.2, and the procedure is documented in `validation/llm_rater_procedure.md`. **This is not a human validation.** *Deviation from the proposal:* the proposal planned two independent human coders with an adjudicated consensus; this was not carried out for v1.2.0, so reliability evidence rests on the LLM-assisted rater only (7 of 13 sub-themes reach κ ≥ 0.70; dimension-level κ 0.66–0.85). Human double coding can still be added without changing the code: two coders fill `validation/coding_sheet_coder_A.xlsx` / `_B.xlsx` independently (randomized IDs, summary text only), save them as `coder_A.xlsx` and `coder_B.xlsx`, adjudicate disagreements into `consensus.xlsx`, and re-run. The notebook then reports coder A–B and dictionary–consensus agreement and κ, and reports human validation as complete only when all three files are present.
 
 ## Limitations
 
-Responsible-innovation themes are coded from the tracker’s short policy summaries, not from full policy texts; the tracker is a curated selection with uneven country coverage; the design is cross-sectional, so results are associations rather than causal effects; and documented commitments are not evidence of actual implementation or enforcement.
+RI themes are coded from short Tracker summaries rather than full texts; the Tracker is a curated, living database with uneven country coverage; the design is cross-sectional, so results are associations, not causal effects; recorded commitments are not evidence of implementation or enforcement; Stage 2 of RQ3 rests on few events and has wide confidence intervals; the human double coding planned in the proposal was not carried out, so coding reliability is supported only by an LLM-assisted rater, and six sub-themes fall below κ = 0.70.
+
+## How to cite
+
+Güler, N. İ., & Bilici, Ö. F. (2026). *Responsible Innovation in National AI Policies — analysis code, data snapshot and results* (Version 1.2.0) [Software]. Zenodo.
+
+Zenodo assigns the version-specific DOI when the GitHub release is archived, so it cannot be written into the archived files themselves; it is shown on the Zenodo record of release v1.2.0 and is added to this README and `CITATION.cff` on GitHub after the release. Version history: v1.0.0 = https://doi.org/10.5281/zenodo.24089357 (first executed run, superseded).
 
 ## Data citation
 
 - AI Policy Tracker, Open Data (CC BY 4.0). https://aipolicytracker.org/open-data
 - World Bank (2026). Worldwide Governance Indicators, 2026 update (CC BY 4.0). https://www.worldbank.org/en/publication/worldwide-governance-indicators
-
-## How to cite
-
-Güler, N. İ., & Bilici, Ö. F. (2026). *Responsible Innovation in National AI Policies — analysis code and results* [Software]. Zenodo. https://doi.org/10.5281/zenodo.XXXXXXX

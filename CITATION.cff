@@ -1,15 +1,16 @@
 cff-version: 1.2.0
 message: "If you use this code or its results, please cite it as below."
-title: "Responsible Innovation in National AI Policies — analysis code and results"
+title: "Responsible Innovation in National AI Policies — analysis code, data snapshot and results"
 type: software
 authors:
   - family-names: "Güler"
     given-names: "Necla İlayda"
   - family-names: "Bilici"
     given-names: "Ömer Furkan"
-version: "1.0.0"
+version: "1.2.0"
 date-released: "2026-11-09"
 license: MIT
+repository-code: "https://github.com/OmerFurkanBilici/ai-ri-national-policies"
 keywords:
   - responsible innovation
   - AI policy
