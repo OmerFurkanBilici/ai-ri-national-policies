@@ -88,7 +88,7 @@ RI themes are coded from short Tracker summaries rather than full texts; the Tra
 
 Güler, N. İ., & Bilici, Ö. F. (2026). *Responsible Innovation in National AI Policies — analysis code, data snapshot and results* (Version 1.2.1) [Software]. Zenodo.
 
-Zenodo assigns the version-specific DOI when the GitHub release is archived, so it cannot be written into the archived files themselves; it is shown on the Zenodo record of release v1.2.1 and is added to this README and `CITATION.cff` on GitHub after the release. Earlier versions (superseded): v1.2.0 = https://doi.org/10.5281/zenodo.24091090; v1.0.0 = https://doi.org/10.5281/zenodo.24089357.
+Version DOI (v1.2.1): https://doi.org/10.5281/zenodo.24091409 — earlier versions (superseded): v1.2.0 https://doi.org/10.5281/zenodo.24091090; v1.0.0 https://doi.org/10.5281/zenodo.24089357
 
 ## Data citation
 
