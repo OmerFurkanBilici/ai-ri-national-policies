@@ -3,7 +3,7 @@
 **Group 7 · Team Batman** — Necla İlayda Güler & Ömer Furkan Bilici
 Module: *AI, Power & Responsibility: Governing Intelligence*
 Target journal: *Technological Forecasting and Social Change* (Elsevier)
-Version: **v1.2.0** (revised analysis after two rounds of technical review; v1.0.0 was the first executed run)
+Version: **v1.2.1** (revised analysis after three rounds of technical review; v1.0.0 was the first executed run)
 
 This repository is the replication package for our study. It contains the executed notebook with all outputs, the exact input files used (with SHA-256 checksums), the validation codings, and every figure and table produced by the final run.
 
@@ -22,7 +22,7 @@ This repository is the replication package for our study. It contains the execut
 
 | Path | Content |
 |---|---|
-| `ai_ri_policy_analysis.ipynb` | Executed notebook (v1.2.0) with all cell outputs; every code cell is preceded by a markdown cell explaining what it does and which RQ / method step it serves |
+| `ai_ri_policy_analysis.ipynb` | Executed notebook (v1.2.1) with all cell outputs; every code cell is preceded by a markdown cell explaining what it does and which RQ / method step it serves |
 | `data/` | Exact input snapshot used for the archived run, `checksums.sha256`, and `data/README.md` (sources, licences, retrieval) |
 | `validation/ai_rater_codes.csv` | Blind LLM-assisted codings of the 40-summary validation sample (see *Coding validation*) |
 | `validation/llm_rater_procedure.md` | Model, date, instruction and procedure of the LLM-assisted rater |
@@ -60,12 +60,12 @@ Details, retrieval information and checksums: `data/README.md`.
 |---|---|---|
 | 1–1b | Set-up, session info, explicit input paths and checksum verification | all |
 | 2 | Load and audit the source files | all |
-| 3 | Country-level sample; reference date and its source; procedural stage (proposal vs finalized) and legal status (enacted binding / binding proposal / non-binding finalized / non-binding proposal) | all |
+| 3 | Country-level sample; reference date and its source; procedural stage (proposal / finalized / archived or superseded) and legal status (enacted binding / binding proposal / non-binding finalized / non-binding proposal / non-binding archived or superseded) | all |
 | 4 | Link WGI Government Effectiveness, Regulatory Quality and income group | RQ2, RQ3 |
 | 5 | Country indicators (recorded strategy, any recorded policy, enacted national binding measure, EU membership) | RQ2, RQ3 |
 | 6 | RI codebook with operational definitions (Stilgoe et al., 2013 dimensions + actualization markers) | RQ1, RQ3, RQ4 |
-| 7–7b | Dictionary coding of all summaries; blind validation sample; coding reliability (κ) | RQ1 |
-| 8 | Enacted binding vs finalized non-binding RI profile (proposals excluded): Fisher tests, BH q-values; country-clustered, length-adjusted logits | RQ1 |
+| 7–7b | Dictionary coding of all summaries; validation sample; exploratory dictionary–LLM agreement check (κ) | RQ1 |
+| 8 | Enacted binding vs finalized non-binding RI profile (proposals and archived/superseded records excluded): Fisher tests, BH q-values; country-clustered, length-adjusted logits | RQ1 |
 | 9 | Recorded strategy adoption vs GE within income groups; M1–M3 logits, LR test; interaction re-estimated for pre-period GE and Regulatory Quality | RQ2 |
 | 10 | GE across policy stages (Kruskal–Wallis, Holm-adjusted pairwise tests); two-stage Firth logit with convergence/rank checks and profile CIs; strategy × law co-occurrence and chronology | RQ3 |
 | 11 | 2017–2022 vs 2023–2025 comparison of the recorded instrument mix; missing dates; clustered/length-adjusted, finalized-only and partial-2026 sensitivities | RQ4 |
@@ -78,7 +78,7 @@ Details, retrieval information and checksums: `data/README.md`.
 
 ## Coding validation
 
-Dictionary codes are the single measurement used for all instruments. A stratified sample of 40 summaries (fixed seed) was coded by an **LLM-assisted rater** (Claude Opus 5.5, Anthropic), blind to the dictionary output, from the operational definitions in Table S2; agreement and Cohen's κ are reported per code and per dimension in Table 1.2, and the procedure is documented in `validation/llm_rater_procedure.md`. **This is not a human validation.** *Deviation from the proposal:* the proposal planned two independent human coders with an adjudicated consensus; this was not carried out for v1.2.0, so reliability evidence rests on the LLM-assisted rater only (7 of 13 sub-themes reach κ ≥ 0.70; dimension-level κ 0.66–0.85). Human double coding can still be added without changing the code: two coders fill `validation/coding_sheet_coder_A.xlsx` / `_B.xlsx` independently (randomized IDs, summary text only), save them as `coder_A.xlsx` and `coder_B.xlsx`, adjudicate disagreements into `consensus.xlsx`, and re-run. The notebook then reports coder A–B and dictionary–consensus agreement and κ, and reports human validation as complete only when all three files are present.
+Dictionary codes are the single measurement used for all instruments. A stratified sample of 40 summaries (fixed seed) was coded by an **LLM-assisted rater** (Claude Opus 5.5, Anthropic) from the operational definitions in Table S2, without access to the dictionary codes for these summaries but with prior exposure to the dictionary rules. Table 1.2 is therefore an **exploratory dictionary–LLM agreement check**; agreement and Cohen's κ are reported per code and per dimension in Table 1.2, and the procedure is documented in `validation/llm_rater_procedure.md`. **This is not a human validation, and the RI findings that depend on the coding (RQ1, RQ3 concreteness, RQ4 profile) are presented as exploratory.** *Deviation from the proposal:* the proposal planned two independent human coders with an adjudicated consensus; this was not carried out for v1.2.0, so reliability evidence rests on the LLM-assisted rater only (7 of 13 sub-themes reach κ ≥ 0.70; dimension-level κ 0.66–0.85). Human double coding can still be added without changing the code: two coders fill `validation/coding_sheet_coder_A.xlsx` / `_B.xlsx` independently (randomized IDs, summary text only), save them as `coder_A.xlsx` and `coder_B.xlsx`, adjudicate disagreements into `consensus.xlsx`, and re-run. The notebook then reports coder A–B and dictionary–consensus agreement and κ, and reports human validation as complete only when all three files are present.
 
 ## Limitations
 
@@ -86,9 +86,9 @@ RI themes are coded from short Tracker summaries rather than full texts; the Tra
 
 ## How to cite
 
-Güler, N. İ., & Bilici, Ö. F. (2026). *Responsible Innovation in National AI Policies — analysis code, data snapshot and results* (Version 1.2.0) [Software]. Zenodo.
+Güler, N. İ., & Bilici, Ö. F. (2026). *Responsible Innovation in National AI Policies — analysis code, data snapshot and results* (Version 1.2.1) [Software]. Zenodo.
 
-Zenodo assigns the version-specific DOI when the GitHub release is archived, so it cannot be written into the archived files themselves; it is shown on the Zenodo record of release v1.2.0 and is added to this README and `CITATION.cff` on GitHub after the release. Version history: v1.0.0 = https://doi.org/10.5281/zenodo.24089357 (first executed run, superseded).
+Zenodo assigns the version-specific DOI when the GitHub release is archived, so it cannot be written into the archived files themselves; it is shown on the Zenodo record of release v1.2.1 and is added to this README and `CITATION.cff` on GitHub after the release. Earlier versions (superseded): v1.2.0 = https://doi.org/10.5281/zenodo.24091090; v1.0.0 = https://doi.org/10.5281/zenodo.24089357.
 
 ## Data citation
 

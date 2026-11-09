@@ -1,0 +1,3 @@
+measure,n_enacted_binding,mean_enacted_binding,median_enacted_binding,n_non_binding,mean_non_binding,median_non_binding,mannwhitney_U,p
+Implementation concreteness (0–3),23,1.39,1.0,116,0.72,1.0,1931.0,<0.001
+Summary length (characters),23,495.57,486.0,116,358.95,381.0,2124.5,<0.001

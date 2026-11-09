@@ -1,0 +1,36 @@
+specification,code,label,odds_ratio,ci_lo,ci_hi,p,q_bh,note
+"2017–2025, country-clustered, length-adjusted",enacted,Enacted binding instrument,2.143,0.608,7.555,0.236,0.324,ok
+"2017–2025, country-clustered, length-adjusted",proposal,Proposal (proposed / under consultation),,,,n/a,n/a,not estimable (zero cell)
+"2017–2025, country-clustered, length-adjusted",binding_flag,"Binding (Tracker flag, incl. drafts)",2.331,0.674,8.06,0.181,0.324,ok
+"2017–2025, country-clustered, length-adjusted",type_strategy,Type: strategy,0.286,0.123,0.663,0.004,0.039,ok
+"2017–2025, country-clustered, length-adjusted",type_hard_law,Type: act / regulation / bill / exec. order,2.002,0.669,5.987,0.214,0.324,ok
+"2017–2025, country-clustered, length-adjusted",type_soft_other,Type: guidance / framework / policy / other,2.538,0.893,7.21,0.080,0.177,ok
+"2017–2025, country-clustered, length-adjusted",dim_anticipation,Anticipation,2.663,1.0,7.092,0.050,0.177,ok
+"2017–2025, country-clustered, length-adjusted",dim_reflexivity,Reflexivity,0.664,0.303,1.455,0.307,0.337,ok
+"2017–2025, country-clustered, length-adjusted",dim_inclusion,Inclusion,0.879,0.332,2.327,0.795,0.795,ok
+"2017–2025, country-clustered, length-adjusted",dim_responsiveness,Responsiveness,2.549,0.922,7.049,0.071,0.177,ok
+"2017–2025, country-clustered, length-adjusted",dim_actualization,Actualization,3.181,1.254,8.069,0.015,0.081,ok
+"2017–2025, country-clustered, length-adjusted",cap_capacity,Capacity building & economic promotion,0.627,0.273,1.444,0.273,0.334,ok
+"2017–2025, finalized instruments only (proposals and archived/superseded excluded)",enacted,Enacted binding instrument,3.178,1.051,9.606,0.031,0.057,unadjusted Fisher
+"2017–2025, finalized instruments only (proposals and archived/superseded excluded)",binding_flag,"Binding (Tracker flag, incl. drafts)",3.178,1.051,9.606,0.031,0.057,unadjusted Fisher
+"2017–2025, finalized instruments only (proposals and archived/superseded excluded)",type_strategy,Type: strategy,0.237,0.103,0.549,<0.001,0.009,unadjusted Fisher
+"2017–2025, finalized instruments only (proposals and archived/superseded excluded)",type_hard_law,Type: act / regulation / bill / exec. order,2.958,0.975,8.98,0.050,0.068,unadjusted Fisher
+"2017–2025, finalized instruments only (proposals and archived/superseded excluded)",type_soft_other,Type: guidance / framework / policy / other,2.721,1.032,7.17,0.044,0.068,unadjusted Fisher
+"2017–2025, finalized instruments only (proposals and archived/superseded excluded)",dim_anticipation,Anticipation,3.27,1.25,8.56,0.017,0.046,unadjusted Fisher
+"2017–2025, finalized instruments only (proposals and archived/superseded excluded)",dim_reflexivity,Reflexivity,0.553,0.253,1.21,0.169,0.186,unadjusted Fisher
+"2017–2025, finalized instruments only (proposals and archived/superseded excluded)",dim_inclusion,Inclusion,1.036,0.336,3.194,1.000,1.000,unadjusted Fisher
+"2017–2025, finalized instruments only (proposals and archived/superseded excluded)",dim_responsiveness,Responsiveness,3.148,1.388,7.139,0.006,0.022,unadjusted Fisher
+"2017–2025, finalized instruments only (proposals and archived/superseded excluded)",dim_actualization,Actualization,3.596,1.548,8.354,0.004,0.022,unadjusted Fisher
+"2017–2025, finalized instruments only (proposals and archived/superseded excluded)",cap_capacity,Capacity building & economic promotion,0.469,0.207,1.066,0.073,0.089,unadjusted Fisher
+2017–2026 incl. partial year,enacted,Enacted binding instrument,2.463,0.822,7.376,0.093,0.111,unadjusted Fisher
+2017–2026 incl. partial year,proposal,Proposal (proposed / under consultation),12.91,0.742,224.46,0.016,0.038,unadjusted Fisher
+2017–2026 incl. partial year,binding_flag,"Binding (Tracker flag, incl. drafts)",2.627,0.881,7.836,0.091,0.111,unadjusted Fisher
+2017–2026 incl. partial year,type_strategy,Type: strategy,0.235,0.106,0.52,<0.001,0.002,unadjusted Fisher
+2017–2026 incl. partial year,type_hard_law,Type: act / regulation / bill / exec. order,2.511,0.915,6.896,0.070,0.106,unadjusted Fisher
+2017–2026 incl. partial year,type_soft_other,Type: guidance / framework / policy / other,3.008,1.174,7.706,0.021,0.042,unadjusted Fisher
+2017–2026 incl. partial year,dim_anticipation,Anticipation,3.71,1.523,9.041,0.003,0.012,unadjusted Fisher
+2017–2026 incl. partial year,dim_reflexivity,Reflexivity,0.538,0.253,1.143,0.132,0.144,unadjusted Fisher
+2017–2026 incl. partial year,dim_inclusion,Inclusion,1.362,0.474,3.916,0.605,0.605,unadjusted Fisher
+2017–2026 incl. partial year,dim_responsiveness,Responsiveness,3.235,1.467,7.134,0.003,0.012,unadjusted Fisher
+2017–2026 incl. partial year,dim_actualization,Actualization,3.033,1.384,6.649,0.007,0.021,unadjusted Fisher
+2017–2026 incl. partial year,cap_capacity,Capacity building & economic promotion,0.454,0.209,0.987,0.057,0.099,unadjusted Fisher

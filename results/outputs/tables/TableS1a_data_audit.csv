@@ -1,0 +1,5 @@
+Dataset,Rows,Columns,Unique units,Coverage notes
+AI Policy Tracker – Policies,244,25,158,adopted_on filled: 186/244; summary_plain filled: 244/244; latest last_verified_at: 2026-09-26
+AI Policy Tracker – Jurisdictions,249,20,249,country: 197; state: 31; region: 14; supranational: 5; territory: 2
+WGI – Government Effectiveness (ge),5553,13,214,years 1996–2025; 2025 estimates: 213
+WGI – Regulatory Quality (rq),5554,13,214,years 1996–2025

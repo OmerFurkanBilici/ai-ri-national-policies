@@ -1,0 +1,4 @@
+policy_stage,n,GE_mean,GE_median
+No recorded instrument,90,-0.517,-0.628
+"Recorded policy, no enacted national binding measure",88,0.502,0.312
+Enacted national binding measure,17,0.502,0.322
